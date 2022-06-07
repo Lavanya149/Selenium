@@ -1,5 +1,7 @@
 package com.tests.herokuapp;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,11 +12,11 @@ import org.testng.annotations.*;
 public class LoginTest extends Base{
 
 	@BeforeTest
-	public static void Driver_initi() {
+	public static void Driver_initi() throws IOException {
 		driver_init();
 	}
 	
-	@Test
+	@Test(priority=1)
 	public static void InvalidUn() {
 		
 		driver.get("https://the-internet.herokuapp.com/login");
@@ -37,7 +39,7 @@ public class LoginTest extends Base{
 		
 	}
 	
-	@Test
+	@Test(priority=2)
 	public static void InValidPwd() {
 		
 		driver.get("https://the-internet.herokuapp.com/login");
@@ -63,7 +65,7 @@ public class LoginTest extends Base{
 		
 	}
 	
-	@Test
+	@Test(priority=3)
 	
 	public static void ValidCredentials() {
 		driver.get("https://the-internet.herokuapp.com/login");
@@ -84,7 +86,7 @@ public class LoginTest extends Base{
 		
 		}
 	
-@Test
+@Test(priority=4)
 	
 	public static void BackroundClr() {
 		driver.get("https://the-internet.herokuapp.com/login");

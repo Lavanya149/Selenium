@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tests.herokuapp.LoginTest">
+      <class name="com.tests.blazedemo.HomePage">
         <methods>
-          <include name="Driver_initi"/>
-          <include name="InValidPwd"/>
+          <include name="TC2_Dept"/>
+          <include name="Tc3_Destn"/>
+          <include name="InitDriver"/>
         </methods>
-      </class> <!-- com.tests.herokuapp.LoginTest -->
+      </class> <!-- com.tests.blazedemo.HomePage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

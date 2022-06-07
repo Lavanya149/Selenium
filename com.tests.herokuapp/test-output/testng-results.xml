@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-28T03:50:30 IST" name="Default suite" finished-at="2022-05-28T03:50:52 IST" duration-ms="21275">
+  <suite started-at="2022-05-31T22:21:53 IST" name="Default suite" finished-at="2022-05-31T22:22:00 IST" duration-ms="6342">
     <groups>
     </groups>
-    <test started-at="2022-05-28T03:50:30 IST" name="Default test" finished-at="2022-05-28T03:50:52 IST" duration-ms="21275">
-      <class name="com.tests.herokuapp.LoginTest">
-        <test-method is-config="true" signature="Driver_initi()[pri:0, instance:com.tests.herokuapp.LoginTest@4a83a74a]" started-at="2022-05-28T03:50:30 IST" name="Driver_initi" finished-at="2022-05-28T03:50:34 IST" duration-ms="3603" status="PASS">
+    <test started-at="2022-05-31T22:21:53 IST" name="Default test" finished-at="2022-05-31T22:22:00 IST" duration-ms="6342">
+      <class name="com.tests.blazedemo.HomePage">
+        <test-method is-config="true" signature="InitDriver()[pri:0, instance:com.tests.blazedemo.HomePage@548d708a]" started-at="2022-05-31T22:21:53 IST" name="InitDriver" finished-at="2022-05-31T22:21:57 IST" duration-ms="3794" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Driver_initi -->
-        <test-method signature="InValidPwd()[pri:0, instance:com.tests.herokuapp.LoginTest@4a83a74a]" started-at="2022-05-28T03:50:34 IST" name="InValidPwd" finished-at="2022-05-28T03:50:52 IST" duration-ms="17579" status="FAIL">
+        </test-method> <!-- InitDriver -->
+        <test-method signature="TC1()[pri:0, instance:com.tests.blazedemo.HomePage@548d708a]" started-at="2022-05-31T22:21:57 IST" name="TC1" finished-at="2022-05-31T22:21:59 IST" duration-ms="1558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC1 -->
+        <test-method signature="TC2_Dept()[pri:0, instance:com.tests.blazedemo.HomePage@548d708a]" started-at="2022-05-31T22:21:59 IST" name="TC2_Dept" finished-at="2022-05-31T22:21:59 IST" duration-ms="252" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Your password is invalid!] but found [Your password is invalid!
-×]]]>
+              <![CDATA[Lists differ at element [0]: Boston != Paris expected [Boston] but found [Paris]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Your password is invalid!] but found [Your password is invalid!
-×]
+              <![CDATA[java.lang.AssertionError: Lists differ at element [0]: Boston != Paris expected [Boston] but found [Paris]
 at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1413)
 at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at com.tests.herokuapp.LoginTest.InValidPwd(LoginTest.java:64)
+at org.testng.Assert.assertEquals(Assert.java:1479)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at com.tests.blazedemo.HomePage.TC2_Dept(HomePage.java:49)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,8 +61,59 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- InValidPwd -->
-      </class> <!-- com.tests.herokuapp.LoginTest -->
+        </test-method> <!-- TC2_Dept -->
+        <test-method signature="Tc3_Destn()[pri:0, instance:com.tests.blazedemo.HomePage@548d708a]" started-at="2022-05-31T22:21:59 IST" name="Tc3_Destn" finished-at="2022-05-31T22:21:59 IST" duration-ms="471" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Lists differ at element [0]: Rome != Buenos Aires expected [Rome] but found [Buenos Aires]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Lists differ at element [0]: Rome != Buenos Aires expected [Rome] but found [Buenos Aires]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:1479)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at com.tests.blazedemo.HomePage.Tc3_Destn(HomePage.java:73)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc3_Destn -->
+        <test-method signature="findFlights()[pri:0, instance:com.tests.blazedemo.HomePage@548d708a]" started-at="2022-05-31T22:21:59 IST" name="findFlights" finished-at="2022-05-31T22:22:00 IST" duration-ms="121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findFlights -->
+      </class> <!-- com.tests.blazedemo.HomePage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
