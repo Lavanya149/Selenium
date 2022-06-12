@@ -6,6 +6,7 @@ import java.util.*;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.*;
@@ -49,9 +50,9 @@ public static WebDriver driver;
 		return pros.getProperty(key);
 	}
 	
-	public List<String> readExcel(String module) throws IOException {
+	public static List<String> readExcel(String module) throws IOException {
 		List<String> data_container = new ArrayList<String>();
-		String path=System.getProperty("user.dir")+"\\src\\main\\java\\resources\\Exceldriven.xlsx";
+		String path=System.getProperty("user.dir")+"\\src\\main\\resources\\Exceldriven.xlsx";
 		FileInputStream fis = new FileInputStream(path);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		System.out.println("number of sheets is " + workbook.getNumberOfSheets());
